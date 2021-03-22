@@ -32,9 +32,12 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btn_1).setOnClickListener {
             mainViewModel.updateEffect1()
+            mainViewModel.updateState1()
         }
+
         findViewById<Button>(R.id.btn_2).setOnClickListener {
             mainViewModel.updateEffect2()
+            mainViewModel.updateState2()
             startActivity(Intent(this, SecondActivity::class.java))
         }
     }
