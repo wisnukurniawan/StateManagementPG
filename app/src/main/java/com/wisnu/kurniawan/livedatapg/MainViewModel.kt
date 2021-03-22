@@ -10,6 +10,10 @@ class MainViewModel : BaseViewModel<State, Effect>(State(), Effect.Uninitialized
         setState { copy(flag2 = true) }
     }
 
+    fun updateState3() {
+        setState { State(flag1 = false, flag2 = false) }
+    }
+
     fun updateEffect1() {
         setEffect { Effect.Effect1 }
     }

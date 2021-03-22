@@ -40,5 +40,9 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.updateState2()
             startActivity(Intent(this, SecondActivity::class.java))
         }
+
+        findViewById<Button>(R.id.btn_3).setOnClickListener {
+            mainViewModel.updateState3()
+        }
     }
 }
