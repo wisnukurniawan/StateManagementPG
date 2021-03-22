@@ -1,4 +1,4 @@
-package com.wisnu.kurniawan.livedatapg
+package com.wisnu.kurniawan.livedatapg.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.Button
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.wisnu.kurniawan.livedatapg.R
+import com.wisnu.kurniawan.livedatapg.second.SecondActivity
 
 class MainActivity : AppCompatActivity() {
 

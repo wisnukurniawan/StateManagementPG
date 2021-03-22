@@ -1,6 +1,8 @@
-package com.wisnu.kurniawan.livedatapg
+package com.wisnu.kurniawan.livedatapg.main
 
-class MainViewModel : BaseViewModel<State, Effect>(State(), Effect.Uninitialized) {
+import com.wisnu.kurniawan.livedatapg.base.BaseViewModel
+
+class MainViewModel : BaseViewModel<State, Effect>(State()) {
 
     fun updateState1() {
         setState { copy(flag1 = true) }
@@ -15,11 +17,11 @@ class MainViewModel : BaseViewModel<State, Effect>(State(), Effect.Uninitialized
     }
 
     fun updateEffect1() {
-        setEffect { Effect.Effect1 }
+        setEffect(Effect.Effect1)
     }
 
     fun updateEffect2() {
-        setEffect { Effect.Effect2 }
+        setEffect(Effect.Effect2)
     }
 
 }

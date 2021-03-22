@@ -1,4 +1,4 @@
-package com.wisnu.kurniawan.livedatapg;
+package com.wisnu.kurniawan.livedatapg.utils;
 
 import android.util.Log;
 
@@ -25,15 +25,6 @@ public class SingleLiveEvent<T> extends MutableLiveData<T> {
     private static final String TAG = "SingleLiveEvent";
 
     private final AtomicBoolean pending = new AtomicBoolean(false);
-
-    /**
-     * Creates a MutableLiveData initialized with the given {@code value}.
-     *
-     * @param value initial value
-     */
-    public SingleLiveEvent(T value) {
-        super(value);
-    }
 
     @MainThread
     public void observe(LifecycleOwner owner, final Observer<? super T> observer) {
