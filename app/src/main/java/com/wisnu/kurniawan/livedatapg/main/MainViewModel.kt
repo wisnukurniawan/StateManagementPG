@@ -1,8 +1,8 @@
 package com.wisnu.kurniawan.livedatapg.main
 
-import com.wisnu.kurniawan.livedatapg.base.ViewModelStateFull
+import com.wisnu.kurniawan.livedatapg.base.ViewModelStateful
 
-class MainViewModel : ViewModelStateFull<MainState, MainEffect>(MainState()) {
+class MainViewModel : ViewModelStateful<MainState, MainEffect>(MainState()) {
 
     fun updateState1() {
         setState { copy(flag1 = true) }
