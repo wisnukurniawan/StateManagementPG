@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.wisnu.kurniawan.livedatapg.utils.SingleLiveEvent
 
-abstract class BaseViewModel<S : BaseState, E : BaseEffect>(private val initialState: S) : ViewModel() {
+abstract class ViewModelStateFull<S : State, E : Effect>(private val initialState: S) : ViewModel() {
 
     private val _state = MutableLiveData<S>(initialState)
 

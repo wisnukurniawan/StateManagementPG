@@ -1,8 +1,8 @@
 package com.wisnu.kurniawan.livedatapg.main
 
-import com.wisnu.kurniawan.livedatapg.base.BaseViewModel
+import com.wisnu.kurniawan.livedatapg.base.ViewModelStateFull
 
-class MainViewModel : BaseViewModel<State, Effect>(State()) {
+class MainViewModel : ViewModelStateFull<MainState, MainEffect>(MainState()) {
 
     fun updateState1() {
         setState { copy(flag1 = true) }
@@ -13,15 +13,15 @@ class MainViewModel : BaseViewModel<State, Effect>(State()) {
     }
 
     fun updateState3() {
-        setState { State(flag1 = false, flag2 = false) }
+        setState { MainState(flag1 = false, flag2 = false) }
     }
 
     fun updateEffect1() {
-        setEffect(Effect.Effect1)
+        setEffect(MainEffect.Effect1)
     }
 
     fun updateEffect2() {
-        setEffect(Effect.Effect2)
+        setEffect(MainEffect.Effect2)
     }
 
 }
